@@ -1,0 +1,189 @@
+.App {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Loading screen */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.loading-content {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+}
+
+.loading-spinner {
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 5px solid #fff;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Main content fade-in */
+.app-content {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.app-content.visible {
+  opacity: 1;
+}
+
+/* Instructions banner */
+.instructions-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 0;
+  font-size: 18px;
+  z-index: 15;
+  text-align: center;
+}
+
+.App-header {
+  background-color: transparent;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  z-index: 20;
+  position: relative;
+}
+
+.webcam {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20vw;
+  height: 15vw;
+  z-index: 20;
+}
+
+.canvas {
+  position: relative;
+  border: solid white;
+  width: 20vw;
+  height: 15vw;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pose-text {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+  z-index: 20;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Apply mirroring separately */
+.mirrored {
+  transform: scaleX(-1);
+}
+
+/* Cards styling */
+.cards-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.card {
+  width: 250px;
+  height: 350px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  color: white;
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+  z-index: 5;
+}
+
+.card-content {
+  opacity: 0.8;
+}
+
+/* Expanded positions based on center card */
+.card.expanded.position-left {
+  transform: translateX(-300px) scale(0.9);
+  opacity: 0.7;
+}
+
+.card.expanded.position-center {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+  z-index: 6;
+}
+
+.card.expanded.position-right {
+  transform: translateX(300px) scale(0.9);
+  opacity: 0.7;
+}
+
+/* Collapsed state - cards stack on top of each other */
+.card.collapsed {
+  transform: translateX(0);
+}
+
+.card.collapsed.card-1 {
+  transform: translateX(0) rotate(-5deg);
+}
+
+.card.collapsed.card-2 {
+  transform: translateX(0) rotate(0deg);
+}
+
+.card.collapsed.card-3 {
+  transform: translateX(0) rotate(5deg);
+}
+
+/* Set the background color for the whole app */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
