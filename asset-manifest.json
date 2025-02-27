@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/handposedirectory/static/css/main.ab58bcba.chunk.css",
+    "main.js": "/handposedirectory/static/js/main.d41aa45f.chunk.js",
+    "main.js.map": "/handposedirectory/static/js/main.d41aa45f.chunk.js.map",
+    "runtime-main.js": "/handposedirectory/static/js/runtime-main.1507a973.js",
+    "runtime-main.js.map": "/handposedirectory/static/js/runtime-main.1507a973.js.map",
+    "static/js/2.9435555e.chunk.js": "/handposedirectory/static/js/2.9435555e.chunk.js",
+    "static/js/2.9435555e.chunk.js.map": "/handposedirectory/static/js/2.9435555e.chunk.js.map",
+    "index.html": "/handposedirectory/index.html",
+    "precache-manifest.22f0ccabf27d25d21ee6d35cce251391.js": "/handposedirectory/precache-manifest.22f0ccabf27d25d21ee6d35cce251391.js",
+    "service-worker.js": "/handposedirectory/service-worker.js",
+    "static/css/main.ab58bcba.chunk.css.map": "/handposedirectory/static/css/main.ab58bcba.chunk.css.map",
+    "static/js/2.9435555e.chunk.js.LICENSE.txt": "/handposedirectory/static/js/2.9435555e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1507a973.js",
+    "static/js/2.9435555e.chunk.js",
+    "static/css/main.ab58bcba.chunk.css",
+    "static/js/main.d41aa45f.chunk.js"
+  ]
+}
